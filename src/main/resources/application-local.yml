@@ -1,0 +1,12 @@
+
+logging:
+  level:
+    root: info
+    com:
+      soonyong: debug
+    org: 
+      springframework: info
+
+spring:
+  config:
+    import: db.yml
