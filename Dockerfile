@@ -8,7 +8,7 @@ RUN chmod +x ./gradlew
 RUN ./gradlew bootJar
 
 FROM adoptopenjdk:11-jdk-hotspot
-COPY --from=builder build/ligs/*.jar app.jar
+COPY --from=builder build/libs/*.jar app.jar
 
 ARG ENVIRONMENT
 
