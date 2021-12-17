@@ -10,7 +10,5 @@ RUN ./gradlew bootJar
 FROM eclipse-temurin:11-jre-alpine
 COPY --from=builder build/libs/*.jar app.jar
 
-ARG ENVIRONMENT
-
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "./app.jar", "--Dspring.profiles.active=${ENVIRONMENT}"]
+ENTRYPOINT ["java", "-jar", "./app.jar"]
