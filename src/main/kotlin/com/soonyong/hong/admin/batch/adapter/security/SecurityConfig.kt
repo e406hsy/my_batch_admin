@@ -8,15 +8,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.security.web.server.SecurityWebFilterChain
 
-
 @Configuration
 @EnableWebFluxSecurity
 class SecurityConfig {
 
     @Bean
     fun securityWebFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
-        return http.authorizeExchange().pathMatchers("/monitor/l7").permitAll().anyExchange().authenticated().and()
-            .formLogin().and().build()
+        return http.authorizeExchange().pathMatchers("/monitor/l7", "/").permitAll().anyExchange()
+            .authenticated().and().formLogin().and().build()
     }
 
     @Bean
