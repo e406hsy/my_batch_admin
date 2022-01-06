@@ -10,3 +10,6 @@ logging:
 spring:
   config:
     import: db.yml
+  devtools:
+    restart:
+      enabled: true
