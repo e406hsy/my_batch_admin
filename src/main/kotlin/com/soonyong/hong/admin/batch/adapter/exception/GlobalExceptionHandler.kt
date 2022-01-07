@@ -13,6 +13,6 @@ class GlobalExceptionHandler {
     @ExceptionHandler
     fun handleException(e: Exception): Mono<String> {
         log.error("error", e)
-        return Mono.just("index")
+        return Mono.just("redirect:/oops.html")
     }
 }

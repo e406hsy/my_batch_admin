@@ -1,0 +1,14 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- 공통 헤더-->
+<th:block th:replace="fragments/head :: headFragment"></th:block>
+
+<body>
+<main>
+    <th:block th:replace="fragments/sidebar :: sidebarFragment"></th:block>
+    <!-- 본문-->
+    <div class="b-example-divider"></div>
+    <th:block layout:fragment="content"></th:block>
+</main>
+</body>
+</html>

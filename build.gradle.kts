@@ -44,6 +44,9 @@ dependencies {
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity5")
 
+	/** thymeleaf **/
+	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+
 	/** spring dev tool **/
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
